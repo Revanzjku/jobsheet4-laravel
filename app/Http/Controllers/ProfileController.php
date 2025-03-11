@@ -16,4 +16,9 @@ class ProfileController extends Controller
     {
         return view('profile');
     }
+
+    public function about()
+    {
+        return view('about');
+    }
 }
