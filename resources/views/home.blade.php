@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layouts.app')
 @section('title', 'Home - RevansApp')
 @section('content')
 <div class="jumbotron text-center bg-light py-5">

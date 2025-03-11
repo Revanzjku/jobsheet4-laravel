@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layouts.app')
 @section('title', 'About Us')
 @section('content')
 <h1 class="text-center mb-5 display-4 fw-bold">Tentang Kami</h1>

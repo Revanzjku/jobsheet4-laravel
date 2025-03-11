@@ -14,7 +14,15 @@ class ProfileController extends Controller
     
     public function profile()
     {
-        return view('profile');
+        $profile = [
+            'name' => 'Revans Satria Putra',
+            'email' => 'satriarevans90@gmail.com',
+            'bio' => 'Siswa SMKN 1 Sayung',
+            'profile_picture' => 'user1.png', // Path gambar
+            'skills' => ['Laravel', 'Blade', 'PHP', 'Bootstrap CSS']
+        ];
+
+        return view('profile', compact('profile'));
     }
 
     public function about()
