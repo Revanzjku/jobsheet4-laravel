@@ -10,16 +10,16 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="/">RevansApp</a>
+            <a class="navbar-brand" href="{{route('home')}}">RevansApp</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/kontak">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('home')}}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('profile')}}">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -30,7 +30,7 @@
     </div>
     
     <footer class="bg-light text-center py-3 mt-5">
-        <p class="mb-0">&copy; 2025 RevansApp. All rights reserved.</p>
+        <p class="mb-0">&copy; {{ date('Y') }} RevansApp. All rights reserved.</p>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

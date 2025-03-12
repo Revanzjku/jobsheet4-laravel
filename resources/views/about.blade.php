@@ -2,8 +2,6 @@
 @section('title', 'About Us')
 @section('content')
 <h1 class="text-center mb-5 display-4 fw-bold">Tentang Kami</h1>
-
-<!-- Visi & Misi Section -->
 <div class="row align-items-center mb-5 py-4 bg-light rounded">
     <div class="col-md-6 p-4">
         <h2 class="fw-bold mb-4">Visi & Misi</h2>
@@ -21,55 +19,33 @@
         </div>
     </div>
     <div class="col-md-6">
-        <img src="assets/about.png" alt="Visi dan Misi" class="img-fluid rounded shadow">
+        <img src="{{ asset('assets/about.png') }}" alt="Visi dan Misi" class="img-fluid rounded shadow">
     </div>
 </div>
-
-<!-- Sejarah Section -->
 <div class="mb-5 py-4">
     <h2 class="text-center fw-bold mb-4">Sejarah Kami</h2>
     <p class="lead text-center mx-auto" style="max-width: 800px;">
-        MyApp bermula dari ide sederhana untuk mengembangkan aplikasi web yang user-friendly dan dapat dimodifikasi dengan mudah. 
+        RevansApp bermula dari ide sederhana untuk mengembangkan aplikasi web yang user-friendly dan dapat dimodifikasi dengan mudah. 
         Dengan menggunakan Laravel Blade, kami berhasil mengintegrasikan berbagai komponen dan fitur modern dalam satu platform yang dinamis.
         Proyek ini dibangun dengan semangat kolaborasi dan inovasi, serta didukung oleh tim yang berdedikasi tinggi.
     </p>
 </div>
-
-<!-- Tim Kami Section -->
 <div class="mb-5 py-5 bg-light rounded">
     <h2 class="text-center fw-bold mb-5">Tim Kami</h2>
-    <div class="row justify-content-center g-4 p-4"> <!-- Tambah gap (g-4) untuk memberi jarak antar card -->
-        <div class="col-lg-4 col-md-6"> <!-- Adjust ukuran kolom untuk responsif -->
-            <div class="card h-100 shadow-sm">
-                <img src="/assets/team1.jpg" class="card-img-top" alt="John Doe">
-                <div class="card-body text-center p-4"> <!-- Tambah padding di card-body -->
-                    <h5 class="card-title fw-bold">Cloud Strife</h5>
-                    <p class="card-text text-muted">Founder &amp; CEO</p>
+    <div class="row justify-content-center g-4 p-4"> 
+        @foreach($teams as $team)
+            <div class="col-lg-4 col-md-6"> 
+                <div class="card h-100 shadow-sm">
+                    <img src="{{ asset('assets/'. $team['image']) }}" class="card-img-top" alt="{{$team['name']}}">
+                    <div class="card-body text-center p-4"> 
+                        <h5 class="card-title fw-bold">{{$team['name']}}</h5>
+                        <p class="card-text text-muted">{{$team['position']}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="card h-100 shadow-sm">
-                <img src="/assets/team2.jpg" class="card-img-top" alt="Jane Smith">
-                <div class="card-body text-center p-4">
-                    <h5 class="card-title fw-bold">Vincent Valentine</h5>
-                    <p class="card-text text-muted">Lead Developer</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="card h-100 shadow-sm">
-                <img src="/assets/team3.png" class="card-img-top" alt="Mike Johnson">
-                <div class="card-body text-center p-4">
-                    <h5 class="card-title fw-bold">Caith Sith</h5>
-                    <p class="card-text text-muted">UI/UX Designer</p>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
-
-<!-- Hubungi Kami Section -->
 <div class="mb-5 py-4">
     <h2 class="text-center fw-bold mb-4">Hubungi Kami</h2>
     <p class="lead text-center mx-auto" style="max-width: 800px;">

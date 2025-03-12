@@ -10,7 +10,6 @@
         <h4 class="fw-bold">{{$profile['name']}}</h4>
         <p class="text-muted mb-1"><i class="bi bi-envelope"></i> {{$profile['email']}}</p>
         <p class="text-muted">Bio : {{$profile['bio']}}</p>
-        
         @if(count($profile['skills']) > 0)
         <h5 class="mt-3">Skills</h5>
         <div class="d-flex justify-content-center flex-wrap">
@@ -23,5 +22,4 @@
         @endif
     </div>
 </div>
-
 @endsection

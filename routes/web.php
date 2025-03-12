@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [ProfileController::class, 'index']);
-Route::get('/profile', [ProfileController::class, 'profile']);
-Route::get('/about', [ProfileController::class, 'about']);
+Route::get('/', [ProfileController::class, 'index'])->name('home');
+Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+Route::get('/about', [ProfileController::class, 'about'])->name('about');
+Route::get('/contact', [ProfileController::class, 'contact'])->name('contact');
 
