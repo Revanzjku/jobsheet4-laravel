@@ -38,12 +38,12 @@ class PageController extends Controller
             ],
             [
                 'name' => 'Budi',
-                'image' => 'user1.png',
+                'image' => 'user2.png',
                 'message' => 'Fitur-fiturnya keren dan desainnya menarik.',
             ],
             [
                 'name' => 'Citra',
-                'image' => 'user1.png',
+                'image' => 'user3.png',
                 'message' => 'Sangat puas dengan performa dan keandalannya.',
             ],
         ];
